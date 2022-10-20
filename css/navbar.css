@@ -1,6 +1,30 @@
+.header_events{
+    margin-bottom: 2rem;
+}
 a.navbar-brand{
     width: 20%;
 }
  h1.title{
     width: auto;
- }
+}
+
+.btn_nav{
+    width: 7rem;
+    height: 3rem;
+    padding: 0 1.5rem !important;
+    margin: 0 0.5rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    margin-top: 1.92rem !important;
+    padding: 0.65rem;
+}
+
+.logo_social{
+    width: 50px;
+}
