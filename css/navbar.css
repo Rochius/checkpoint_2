@@ -24,6 +24,9 @@ footer{
     margin-top: 1.92rem !important;
     padding: 0.65rem;
 }
+.bg-light{
+    background-color: rgb(212, 212, 212) !important;
+}
 
 .logo_social{
     width: 50px;
