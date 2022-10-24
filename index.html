@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
     <title>Home</title>
 
 </head>
-<body class="container-fluid">
+<body class="container-fluid d-flex flex-column h-100">
     <header class="header_events">
         <nav class="navbar navbar-expand-md  navbar-light bg-secondary row border-bottom border-dark">
             <div class="container-fluid">
@@ -38,7 +38,7 @@
             <span class="col-1 text-end">&lt;</span><span class="col-10 text-center">Home</span><span class="col-1 text-start">&gt;</span>
         </h1>
     </header>
-    <main>
+    <main class="flex-shrink-0">
         <div class="row">
             <div class="col-md-12 col-lg-9">
                 <div class="form-check form-check-inline container-fluid">
@@ -70,7 +70,10 @@
                     <div class="card-body">
                       <h5 class="card-title text-center">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <div class="row">
+                        <span class="col-6">Texto prueba</span>
+                        <a href="./pages/details.html" class="btn btn-primary col-6">Details</a>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -80,7 +83,10 @@
                     <div class="card-body">
                       <h5 class="card-title text-center">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <div class="row">
+                        <span class="col-6">Texto prueba</span>
+                        <a href="./pages/details.html" class="btn btn-primary col-6">Details</a>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -90,7 +96,10 @@
                     <div class="card-body">
                       <h5 class="card-title text-center">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <div class="row">
+                        <span class="col-6">Texto prueba</span>
+                        <a href="./pages/details.html" class="btn btn-primary col-6">Details</a>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -102,14 +111,14 @@
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       <div class="row">
                         <span class="col-6">Texto prueba</span>
-                        <a href="#" class="btn btn-primary col-6">Go somewhere</a>
+                        <a href="./pages/details.html" class="btn btn-primary col-6">Details</a>
                       </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="row bg-secondary border-top border-dark">
+    <footer class="row bg-secondary border-top border-dark mt-auto">
         <div class="col-1">
             <img src="./assets/img/logo_instagram.png" alt="" class="img-fluid logo_social">
         </div>
