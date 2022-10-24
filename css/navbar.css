@@ -1,6 +1,9 @@
 .header_events{
     margin-bottom: 2rem;
 }
+.header_stats{
+    margin-bottom: 1rem;
+}
 a.navbar-brand{
     width: 20%;
 }
@@ -21,7 +24,7 @@ a.navbar-brand{
 }
 
 footer{
-    margin-top: 1.92rem !important;
+    margin-top: 2.35rem !important;
     padding: 0.65rem;
 }
 .bg-light{
