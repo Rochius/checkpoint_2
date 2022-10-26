@@ -4,6 +4,11 @@
 .header_stats{
     margin-bottom: 1rem;
 }
+
+.bg-secondary{
+    background-color: rgb(155, 155, 155) !important;    
+}
+
 a.navbar-brand{
     width: 20%;
 }
@@ -16,18 +21,33 @@ a.navbar-brand{
     height: 3rem;
     padding: 0 1.5rem !important;
     margin: 0 0.5rem;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.898);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-radius: 0.25rem;
+}
+
+.search_input{
+    width: 80%;
+    border-radius: 0.25rem;
+}
+
+.search_button{
+    border: none;
+    background: none;
+}
+
+.search_button img{
+    width: 50px;
 }
 
 footer{
     padding: 0.65rem;
 }
 .bg-light{
-    background-color: rgb(212, 212, 212) !important;
+    background-color: #d4d4d4 !important;
 }
 
 .logo_social{
@@ -41,12 +61,10 @@ div.form-check{
 .img_card{
     width: calc(100% - 2rem);
     height: 9rem;
-    background-color: palevioletred;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 1rem;
-    box-shadow: rgb(0 0 0 / 45%) -5px -5px 9px 1px;
 }
 
 .img-details{
@@ -70,11 +88,6 @@ div.form-check{
     height: calc(100% - 2rem);
     margin: 1rem;
 }
-
-/* .card-text-details{
-    width: calc(50% - 2rem);
-    margin: 1rem;
-} */
 
 .description{
     width: calc(100% - 2rem);
@@ -117,6 +130,10 @@ div.form-check{
     }
     .img-details{
         height: 30vh;
+    }
+
+    .title span:first-child , .title span:last-child{
+        display: none;
     }
   }
 
