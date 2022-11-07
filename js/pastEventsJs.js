@@ -1,0 +1,1 @@
+paintDOM(pastEvents)

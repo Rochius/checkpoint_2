@@ -103,6 +103,16 @@ div.form-check{
     font-weight: lighter;
 }
 
+/* #card_container div div{
+    height: 70%;
+} */
+
+.card-body{
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 @media (max-width: 767px) {
     .img-details{
         width: calc(100% - 2rem);
