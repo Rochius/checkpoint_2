@@ -1,5 +1,18 @@
 //ANTERIOR PAINTDOM()
-function paintDOM(events){
+const paintDOMCategories = (eventCategories) => {
+    const tagToUpdate =  document.getElementById('container-category-check')
+    let containerCategoryCheckbox = ``
+    eventCategories.map(eventCategorie => {
+        containerCategoryCheckbox += `
+                <div class="form-check form-check-inline container-fluid me-0">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">${eventCategorie}</label></div>
+                </div>
+        `
+    })
+    tagToUpdate.innerHTML = containerCategoryCheckbox
+}
+const paintDOM = (events) => {
     let cardContainer = ``
     const tagToUpdate = document.getElementById("card_container")
     events.map(event => {

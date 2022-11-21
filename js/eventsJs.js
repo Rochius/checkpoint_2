@@ -172,7 +172,7 @@ function convert_date(stringDate){
 
 const futureEvents=[]
 const pastEvents = []
-
+const eventCategories = []
 
 const eventos = data.eventos.map(evento => {
     if(convert_date(data.fechaActual) < convert_date(evento.date)){
@@ -182,5 +182,11 @@ const eventos = data.eventos.map(evento => {
         pastEvents.push(evento);
     }
 
+    if (!eventCategories.includes(evento.category)){
+      eventCategories.push(evento.category)
+    }
+
     return evento
 })
+
+console.log(eventCategories)

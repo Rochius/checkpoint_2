@@ -3,4 +3,6 @@
 //     ...futureEvents
 // ]
 
+paintDOMCategories(eventCategories)
+
 paintDOM(eventos)
