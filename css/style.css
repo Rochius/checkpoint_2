@@ -118,6 +118,10 @@ div.form-check{
     flex-direction: column;
     justify-content: space-between;
 }
+
+.invisible {
+    display: none;
+}
 @media (max-width: 767px) {
     .img-details{
         width: calc(100% - 2rem);
