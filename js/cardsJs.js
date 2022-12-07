@@ -208,6 +208,13 @@ const paintDOMCategories = (eventCategories) => {
 const paintDOM = (events) => {
     let cardContainer = ``
     const tagToUpdate = document.getElementById("card_container")
+    const currentUrl = window.location.pathname;
+    let urlDetails = ""
+    if(currentUrl.includes("pastEvents") || currentUrl.includes("upcomingEvents")){
+      urlDetails = "./details.html"
+    }else{
+      urlDetails = "./pages/details.html"
+    }
     events.map(event => {
         cardContainer +=`
             <div class="col-9 col-sm-6 col-md-5 col-lg-3 card-search" id="${event.category.replace(" ", "")}">
@@ -219,7 +226,7 @@ const paintDOM = (events) => {
                       <p class="card-text">${event.description}</p>
                       <div class="row">
                         <span class="col-6">$${event.price}</span>
-                        <a href="./pages/details.html" class="btn btn-primary col-6">Details</a>
+                        <a href="${urlDetails}?name=${event.name.replace(/\s/g,'')}" class="btn btn-primary col-6">Details</a>
                       </div>
                     </div>
                 </div>
