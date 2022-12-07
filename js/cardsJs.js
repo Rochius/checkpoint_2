@@ -210,7 +210,7 @@ const paintDOM = (events) => {
     const tagToUpdate = document.getElementById("card_container")
     const currentUrl = window.location.pathname;
     let urlDetails = ""
-    if(currentUrl.includes("pastEvents") || currentUrl.includes("upcomingEvents")){
+    if(currentUrl.toLowerCase().includes("pastevents") || currentUrl.toLowerCase().includes("upcomingevents")){
       urlDetails = "./details.html"
     }else{
       urlDetails = "./pages/details.html"
