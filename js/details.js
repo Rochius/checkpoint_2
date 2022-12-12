@@ -4,10 +4,20 @@ const params = cardDetail.get('name')
 console.log(params)
 
 let eventDetail = {}
+let attendance = ""
+let attendanceLabel = ""
 
-data.eventos.forEach(event => {
+data.events.forEach(event => {
     if(event.name.replace(/\s/g,'') == params){
         eventDetail = event
+      if(pastEvents.includes(event)){
+        attendance = event.assistance
+        attendanceLabel = "Attendance"
+      }
+      else{
+        attendance = event.estimate
+        attendanceLabel = "Estimate"
+      }
     }
 });
 
@@ -27,7 +37,7 @@ const paintDetailsDOM = (event) =>{
         <p class="card-text-details">Category: <span>${event.category}</span></p>
         <p class="card-text-details">Place: <span>${event.place}</span></p>
         <p class="card-text-details">Capacity: <span>${event.capacity}</span></p>
-        <p class="card-text-details">Assistance: <span>${event.assistance}</span></p>
+        <p class="card-text-details">${attendanceLabel}: <span>${attendance}</span></p>
         <p class="card-text-details">Price: <span>$${event.price}</span></p>
       </div>
     </div>
