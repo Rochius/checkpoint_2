@@ -753,21 +753,20 @@ const revenuesAndAttendanceCategories = (events, categories)=>{
         let assistance = 0
         let capacity = 0
         eventsSameCategory.forEach(eventSameCategory => {
-            revenues += eventSameCategory.price
-            assistance += Number(eventSameCategory.assistance) || Number(eventSameCategory.estimate)
-            capacity += Number(eventSameCategory.capacity)
-            console.log(category)
-            console.log(assistance)
-            console.log(capacity)
+
+            revenues += eventSameCategory.price * (Number(eventSameCategory.assistance) || Number(eventSameCategory.estimate))
+            assistance = Number(eventSameCategory.assistance) || Number(eventSameCategory.estimate)
+            capacity = Number(eventSameCategory.capacity)
+
+            if(assistance == 0 || capacity == 0){
+                percentageAssistance += 0
+            }else{
+                percentageAssistance += (assistance * 100)/capacity
+            }
         })
 
-        if(assistance == 0 && capacity == 0){
-            percentageAssistance=0
-        }else{
-            percentageAssistance = (assistance * 100)/capacity
-        }
         console.log(percentageAssistance)
-        listPerCategory.push({'category':category, 'revenues': revenues, 'percentageAssistance': percentageAssistance})
+        listPerCategory.push({'category':category, 'revenues': revenues, 'percentageAssistance': (percentageAssistance/eventsSameCategory.length)})
     });
 
     return listPerCategory
